@@ -1,13 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.AWTEventListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-class first{
-    public static void main(String args[]){
-        // frame
-        JFrame frame = new JFrame("Chat Frame");
+public class first{
+
+    public static JFrame frame = new JFrame("Chat Frame");
+
+    public static void Frame(JFrame frame) {
+        //JFrame frame = new JFrame("Chat Frame");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,400);
-        
         
         // Menu 
         JMenuBar MenuBar1 = new JMenuBar();
@@ -51,7 +55,16 @@ class first{
         frame.getContentPane().add(BorderLayout.NORTH, MenuBar1);
         frame.getContentPane().add(BorderLayout.CENTER, TA1);
         // frame.pack();
-        frame.setVisible(true);
+        frame.setVisible(true);       
+
+        
+
+    }
+    
+    
+    public static void main(String args[]){
+        Frame(frame);
+
     }
 }
 
